@@ -1,22 +1,22 @@
-// sw.js - Service Worker para FONSY Nails Studio Habana
+// sw.js - Service Worker para Yeney Nails Salón
 
-const CACHE_NAME = 'fonsy-nails-v1';
+const CACHE_NAME = 'yeney-nails-v1';
 const urlsToCache = [
-  '/fonsy-nails/',
-  '/fonsy-nails/index.html',
-  '/fonsy-nails/admin.html',
-  '/fonsy-nails/admin-login.html',
-  '/fonsy-nails/setup-wizard.html',
-  '/fonsy-nails/editar-negocio.html',
-  '/fonsy-nails/manifest.json',
-  '/fonsy-nails/icons/icon-72x72.png',
-  '/fonsy-nails/icons/icon-96x96.png',
-  '/fonsy-nails/icons/icon-128x128.png',
-  '/fonsy-nails/icons/icon-144x144.png',
-  '/fonsy-nails/icons/icon-152x152.png',
-  '/fonsy-nails/icons/icon-192x192.png',
-  '/fonsy-nails/icons/icon-384x384.png',
-  '/fonsy-nails/icons/icon-512x512.png'
+  '/yeney-nails/',
+  '/yeney-nails/index.html',
+  '/yeney-nails/admin.html',
+  '/yeney-nails/admin-login.html',
+  '/yeney-nails/setup-wizard.html',
+  '/yeney-nails/editar-negocio.html',
+  '/yeney-nails/manifest.json',
+  '/yeney-nails/icons/icon-72x72.png',
+  '/yeney-nails/icons/icon-96x96.png',
+  '/yeney-nails/icons/icon-128x128.png',
+  '/yeney-nails/icons/icon-144x144.png',
+  '/yeney-nails/icons/icon-152x152.png',
+  '/yeney-nails/icons/icon-192x192.png',
+  '/yeney-nails/icons/icon-384x384.png',
+  '/yeney-nails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/fonsy-nails/icons/icon-192x192.png');
+            return caches.match('/yeney-nails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para FONSY Nails Studio Habana');
+console.log('✅ Service Worker configurado para Yeney Nails Salón');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

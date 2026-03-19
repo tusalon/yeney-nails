@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: FONSY Nails Studio Habana
+// CLIENTE: Yeney Nails Salón
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '13516bb0-6ba6-4ffc-a5c6-10d3be396651'; // ID de FONSY Nails Studio Habana
+const NEGOCIO_ID_POR_DEFECTO = '4044469d-c34a-497b-98fc-a11106cd8666'; // ID de Yeney Nails Salón
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'FONSY Nails Studio Habana';
+    return config?.nombre || 'Yeney Nails Salón';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '53464032';
+    return config?.telefono || '52831452';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'fonsynails@gmail.com';
+    return config?.email || 'oshungere81@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a FONSY Nails Studio Habana!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Yeney Nails Salón!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'fonsy-nails';
+    return config?.ntfy_topic || 'yeney-nails';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para FONSY Nails Studio Habana');
+console.log('✅ config-negocio.js listo para Yeney Nails Salón');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
